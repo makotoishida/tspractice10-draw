@@ -239,7 +239,7 @@ function handleTouchStart(ev: TouchEvent) {
   renderApp(state)
 }
 
-function handleTouchMove(ev: TouchEvent) {
+function handleTouchMove(/* ev: TouchEvent */) {
   // console.log('TouchMove:', ev)
   renderApp(state)
 }
