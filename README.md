@@ -2,4 +2,4 @@
 
 ## Live DEMO
 
-https://makotoishida.github.io/tspractice10-taskboard/
+https://makotoishida.github.io/tspractice10-draw/
