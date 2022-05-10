@@ -1,4 +1,4 @@
-import { html, svg, render, TemplateResult } from 'lit-html'
+import { html, svg, render } from 'lit-html'
 import 'normalize.css'
 import './style.css'
 
