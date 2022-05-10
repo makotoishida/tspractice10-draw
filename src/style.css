@@ -43,7 +43,7 @@ footer a {
 #app {
   width: 100vw;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 0;
   text-align: center;
   font-size: x-large;
   line-height: 160%;
@@ -51,155 +51,12 @@ footer a {
   background-color: #ffffcc;
 }
 
-.project-selector {
-  display: grid;
-  grid-template-columns:  repeat(auto-fit, minmax(10rem, 1fr));
-}
-
-.project-selector .project {
-  border-radius: 0.4rem;
-  cursor: pointer;
-  transition: all 0.4s;
-  background-color: #e0e0c0c0;
-  border-bottom: 1px solid #aaa;
-}
-.project-selector  .project:hover {
-  background-color: yellow;
-}
-.project-selector .project.active {
-  color: blue;
-  border-top: 1px solid #aaa;
-  border-left: 1px solid #aaa;
-  border-right: 1px solid #aaa;
-  border-bottom: none;
-  background-color: #ffffaaf0;
-}
-
-.project-selector button {
-  width: 7rem;
-  margin: 0.4rem auto;
-  font-size: 80%;
-  border: 1px solid #a0a0a0a0;
-  cursor: pointer;
-}
-
-.project-title {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  margin: 1.2rem 0 0.4rem;
-  color: #44f;
-  font-weight: bold;
-}
-.project-title.editing form {
-  display: grid;
-  grid-template-columns: 1fr auto auto ;
-}
-.project-title.editing form input {
-  min-width: 6rem;
-}
-.project-title h3 {
-  margin: 0;
-  cursor: pointer;
-}
-.project-title button {
-  padding: 0.2rem 0.4rem;
-  font-size: 70%;
-  border: 1px solid #a0a0a0a0;
-  cursor: pointer;
-}
-
-.lanes {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-  column-gap: 0.2rem;
-  background-color: #ccc;
-}
-
-.lane {
-  display: grid;
-  grid-template-rows: auto 1fr;
-  min-height: 20rem;
-  padding: 0;
-  background-color: #eee;
-}
-
-.lane-title {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  padding: 0.4rem;
+.canvas {
+  width: 100%;
+  height: 100%;
+  max-width: 100vw;
+  max-height: 80vh;
+  margin: auto;
   background-color: #fefefe;
-}
-.lane-title.editing form {
-  display: grid;
-  grid-template-columns: 1fr auto auto ;
-}
-.lane-title.editing form input {
-  min-width: 4rem;
-}
-.lane-title button {
-  padding: 0.2rem 0.4rem;
-  font-size: 70%;
-  border: 1px solid #a0a0a0a0;
-  cursor: pointer;
-}
 
-.lane-title h4 {
-  margin: 0rem;
-  cursor: pointer;
-}
-.lane-title button {
-  margin: 0;
-  padding: 0.2rem 0.4rem;
-  cursor: pointer;
-}
-
-.tasks {
-  display: grid;
-  align-content: flex-start;
-  row-gap: 0.4rem;
-  padding: 0.4rem;
-}
-.tasks.over {
-  background-color: #ffc1d4d0;
-  border: 2px splid pink;
-}
-
-.task {
-  height: min-content;
-  padding: 0.2rem;
-  background-color: #fff;
-  border: 1px solid #bbb;
-  border-radius: 0.4rem;;
-  cursor: pointer;
-}
-.task.over-top {
-  border-top: 2px solid blue;
-}
-.task.over-bottom {
-  border-bottom: 2px solid blue;
-}
-
-.task-title {
-  margin: 0;
-  font-size: large;
-  font-weight: normal;
-}
-.task.editing form {
-  display: grid;
-}
-.task.editing form input {
-  min-width: 4rem;
-}
-.task.editing form .buttons{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.4rem;
-  padding: 0.4rem;
-}
-
-.task-description {
-  font-size: medium;
-}
-.task-due {
-  font-size: small;
 }
