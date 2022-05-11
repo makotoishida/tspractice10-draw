@@ -1,5 +1,4 @@
 import { State, Shapes, Stroke, Fill } from './types'
-import { getRandomID } from './utils'
 
 const STORAGE_KEY = 'draw'
 
