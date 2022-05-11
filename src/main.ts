@@ -2,8 +2,9 @@ import { html, svg, render } from 'lit-html'
 import 'normalize.css'
 import './style.css'
 import { State, Shapes, Rect, Circle, Line, ShapeTypes } from './types'
+import { load, save } from './storage'
 
-const state: State = {
+let state: State = {
   appWidth: 0,
   appHeight: 0,
   mouseDown: false,
@@ -24,6 +25,11 @@ const state: State = {
     stroke: { color: 'blue' },
     fill: { color: 'aqua' },
   },
+}
+
+async function addShape(state: State, shape: Shapes) {
+  state.shapes.push(shape)
+  await save(state)
 }
 
 function DrawRectangle(rect: Rect) {
@@ -157,7 +163,7 @@ function handleMouseUp(ev: MouseEvent) {
   end(ev.offsetX, ev.offsetY)
 }
 
-function end(x2: number, y2: number) {
+async function end(x2: number, y2: number) {
   state.mouseDown = false
   const type = state.drawing.type
   const x = state.startPos.x
@@ -217,7 +223,7 @@ function end(x2: number, y2: number) {
   }
 
   if (shape.type !== 'none') {
-    state.shapes.push(shape)
+    await addShape(state, shape)
   }
   renderApp(state)
 }
@@ -297,4 +303,9 @@ async function renderApp(state: State) {
   render(App(state), appRoot)
 }
 
-renderApp(state)
+load().then((loadedState) => {
+  console.log(loadedState)
+  state = loadedState
+  renderApp(state)
+})
+
